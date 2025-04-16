@@ -139,7 +139,7 @@ const Header = () => {
           {/* 좌측: 로고 */}
           <div className={styles.left} onClick={() => navigate('/')}>
             <img
-              src={`${import.meta.env.BASE_URL}/images/logo.png`}
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt='당근 로고'
               className={styles.logo}
             />
