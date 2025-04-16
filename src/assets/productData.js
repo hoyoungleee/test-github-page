@@ -208,7 +208,7 @@ export const products = [
     id: 'pop1',
     title: '에어팟 프로2 c타입',
     slides: [
-      `${import.meta.env.BASE_URL}'/assets/jinho/slides/popImg1.jpg`,
+      `${import.meta.env.BASE_URL}/assets/jinho/slides/popImg1.jpg`,
       `${import.meta.env.BASE_URL}/assets/jinho/slides/popItem1/popItem1_1.jpg`,
       `${import.meta.env.BASE_URL}/assets/jinho/slides/popItem1/popItem1_2.jpg`,
     ],
