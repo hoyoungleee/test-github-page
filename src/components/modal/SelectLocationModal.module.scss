@@ -1,0 +1,120 @@
+.modals {
+  position: fixed; /* 화면 위에 고정 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    width: 560px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px 10px 2px 10px;
+    padding: 0 10px;
+  }
+
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 10px;
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  .inputDiv {
+    border: 1px solid #dcdee3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      color: #dcdee3;
+      flex-grow: 1;
+      border-color: transparent;
+      height: 30px;
+    }
+
+    input:focus {
+      color: black;
+      border-color: transparent;
+      outline: transparent;
+      height: 30px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+
+    .clearButton {
+      border-radius: 100%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-color: transparent;
+      align-self: center;
+      color: white;
+      background-color: #afb0b1;
+      opacity: 0.5;
+    }
+  }
+}
+.myLocation {
+  margin-top: 10px;
+  color: #e84500;
+  background-color: rgba(232, 69, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  height: 30px;
+  border-color: transparent;
+  border-radius: 4px;
+  font-size: 13px;
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.list {
+  overflow: auto;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    padding: 0;
+  }
+
+  ul > li:first-child {
+    font-size: 13px;
+    color: #006497;
+    line-height: 135%;
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 135%;
+    border-bottom: 1px solid #dcdee3;
+    padding: 10px;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+}

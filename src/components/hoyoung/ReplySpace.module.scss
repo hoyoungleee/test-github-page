@@ -1,0 +1,29 @@
+.comment {
+  padding: 1rem;
+  padding-left: 0;
+
+  // border-bottom: 1px solid #eee;
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  p {
+    color: #181616;
+    margin: 5px;
+    padding-left: 2.9em;
+  }
+}
+.info {
+  position: relative;
+  padding-left: 4em;
+
+  color: rgb(134, 131, 131);
+  font-size: 0.8rem;
+  span {
+    position: relative;
+    top: 4px;
+  }
+}

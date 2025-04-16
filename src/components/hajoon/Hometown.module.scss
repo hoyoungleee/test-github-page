@@ -1,0 +1,31 @@
+.hometown {
+  width: 1240px;
+  height: 96px;
+  margin: 40px 0 370px 0;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+  ul {
+    width: 840px;
+    height: 96px;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 16px;
+    align-self: center;
+    padding: 0;
+  }
+  li {
+    background-color: #f3f4f5;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  li:hover {
+    background-color: #eeeff1;
+    cursor: pointer;
+  }
+}

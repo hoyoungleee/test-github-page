@@ -1,0 +1,87 @@
+/* src/components/jinho/SellerInfo.module.scss */
+
+$profile-pic-size: 40px;
+$text-primary: #212529;
+$text-secondary: #868e96;
+// 실제 당근마켓 색상 확인 후 조정 필요
+$temp-color-high: #007bff; // 예시: 파랑
+$temp-color-normal: #ff6f0f; // 예시: 주황
+$temp-color-low: #adb5bd; // 예시: 회색
+
+.sellerInfoContainer {
+  display: flex; // 핵심: Flexbox 레이아웃 사용
+  align-items: center; // 세로 중앙 정렬
+  padding: 16px 0; // 상하 패딩 (ProductDetailsPage 에서 조절 가능)
+  border-bottom: 1px solid #e9ecef; // 섹션 구분선 (선택 사항)
+  gap: 10px; // 프로필 사진과 텍스트 사이 간격
+}
+
+.profilePicWrapper {
+  flex-shrink: 0; // 이미지 크기 고정
+}
+
+.profilePic {
+  width: $profile-pic-size;
+  height: $profile-pic-size;
+  border-radius: 50%; // 원형 이미지
+  object-fit: cover; // 이미지 비율 유지하며 채우기
+  display: block;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column; // 닉네임, 지역 세로 배치
+  flex-grow: 1; // 남는 공간 차지 (중요: 매너온도 부분을 오른쪽으로 밀어냄)
+  min-width: 0; // 내용이 길어져도 줄바꿈 허용
+}
+
+.nickname {
+  font-size: 15px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 2px;
+}
+
+.location {
+  font-size: 13px;
+  color: $text-secondary;
+}
+
+.mannerTempWrapper {
+  display: flex; // 온도 숫자/이모지 와 '매너온도' 텍스트 정렬
+  flex-direction: column; // 세로로 쌓기
+  align-items: flex-end; // 오른쪽 정렬
+  margin-left: auto; // 핵심: 자동으로 왼쪽 마진을 최대로 주어 오른쪽 끝으로 이동!
+  flex-shrink: 0; // 크기 고정
+  text-align: right; // 내부 텍스트 오른쪽 정렬
+}
+
+.tempInfo {
+  display: flex;
+  align-items: baseline; // 숫자와 이모지 기준선 정렬
+  gap: 4px; // 숫자와 이모지 사이 간격
+  margin-bottom: 2px; // 온도와 '매너온도' 텍스트 사이 간격
+}
+
+.temperatureValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: $temp-color-normal; // 기본 색상
+
+  // 온도별 색상 클래스
+  &.tempHigh { color: $temp-color-high; }
+  &.tempNormal { color: $temp-color-normal; }
+  &.tempLow { color: $temp-color-low; }
+}
+
+.mannerEmoji {
+  font-size: 18px; // 이모지 크기
+}
+
+.mannerLabel {
+  font-size: 11px;
+  color: $text-secondary;
+}
+
+// 온도 바(bar) 스타일 (선택 사항)
+// .tempBar { ... }

@@ -1,0 +1,47 @@
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  padding-bottom: 0;
+  font-size: 0.8em;
+}
+.breadcrumb span {
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; // 간격
+
+  /* optional: max-width 설정 */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.sideMenu {
+  width: 200px;
+  flex-shrink: 0; // 사이드 메뉴 너비 고정
+}
+
+.blog {
+  flex: 1; // 나머지 공간 다 차지
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.searchbar {
+  max-width: 100%;
+  margin: 2rem auto 0 auto; // 위 간격을 2rem으로
+  padding: 0 2rem;
+  width: 1200px;
+
+  Button {
+    flex-grow: 0.1;
+  }
+}

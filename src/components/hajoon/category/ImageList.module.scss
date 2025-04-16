@@ -1,0 +1,27 @@
+.imageDiv {
+  align-items: stretch;
+  background-color: #f3f4f5;
+  padding: 12px 16px;
+  width: 120px;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #1a1c20;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+  height: auto;
+  a {
+    text-decoration: none;
+  }
+}
+
+.imageDiv:hover {
+  background-color: #eeeff1;
+  cursor: pointer;
+}

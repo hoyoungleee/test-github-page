@@ -1,0 +1,20 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 104px;
+  margin-top: 48px;
+  box-sizing: border-box;
+  justify-content: center;
+
+  ul {
+    width: 900px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-self: center;
+  }
+}

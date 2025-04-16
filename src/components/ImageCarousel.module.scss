@@ -1,0 +1,127 @@
+/* src/components/jinho/ImageCarousel.module.scss */
+
+/* 변수 정의 (선택 사항) */
+$image-max-height: 450px; // 필요에 따라 이미지 최대 높이 조절
+$arrow-bg: rgba(0, 0, 0, 0.4);
+$arrow-bg-hover: rgba(0, 0, 0, 0.7);
+$arrow-color: white;
+$dot-bg: rgba(255, 255, 255, 0.6);
+$dot-bg-active: white;
+$dot-border: rgba(0, 0, 0, 0.1);
+$dot-border-active: rgba(0, 0, 0, 0.3);
+$transition-speed: 0.4s; // 슬라이드 속도 조절
+$transition-timing: ease-in-out;
+$placeholder-text-color: #888;
+$placeholder-border-color: #ccc;
+
+/* 메인 컨테이너 */
+.imageCarouselManual {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden; // 중요: 슬라이드 영역 밖 숨김
+
+  &.singleImage {
+    overflow: visible;
+    .carouselSlideImage {
+       min-width: 100%;
+       display: block;
+    }
+  }
+}
+
+/* 이미지 뷰포트 */
+.carouselImageContainer {
+  width: 100%;
+  max-height: $image-max-height;
+  overflow: hidden; // 중요
+}
+
+/* 슬라이딩될 div */
+.carouselImageSlider {
+  display: flex; // 이미지 가로 정렬
+  transition: transform 0.3s ease-in-out; // 슬라이드 애니메이션
+}
+
+/* 개별 이미지 */
+.carouselSlideImage {
+  flex-shrink: 0;
+  height: auto; // 비율 유지
+  max-height: $image-max-height;
+  object-fit: contain; // 이미지 잘림 방식 (contain 또는 cover)
+  display: block; // 하단 여백 제거
+  width: 100%; /* 각 이미지가 슬라이드 컨테이너의 너비를 채우도록 설정 */
+  height: auto; /* 높이는 비율에 맞춰 자동 조정 (기본) */
+
+}
+
+/* 화살표 버튼 */
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $arrow-bg;
+  color: $arrow-color;
+  border: none;
+  padding: 8px;
+  font-size: 24px; // 아이콘 크기
+  line-height: 0;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $arrow-bg-hover;
+  }
+
+  &.leftArrow {
+    left: 10px;
+  }
+
+  &.rightArrow {
+    right: 10px; // right 속성 사용
+  }
+}
+
+/* 점 인디케이터 컨테이너 */
+.carouselDots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+/* 개별 점 버튼 */
+.carouselDot {
+  background-color: $dot-bg;
+  border: 1px solid $dot-border;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &.active {
+    background-color: $dot-bg-active;
+    border-color: $dot-border-active;
+  }
+}
+
+/* 플레이스홀더 */
+.carouselPlaceholder {
+   text-align: center;
+   padding: 50px;
+   color: $placeholder-text-color;
+   border: 1px dashed $placeholder-border-color;
+   border-radius: 4px;
+   margin: auto;
+   min-height: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }

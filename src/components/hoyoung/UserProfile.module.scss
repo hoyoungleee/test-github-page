@@ -1,0 +1,43 @@
+.userCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+
+  .nickname {
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 6px;
+  }
+
+  .temperature {
+    background-color: #e6f4ff;
+    color: #2580d6;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    line-height: 1;
+  }
+}
+
+.meta {
+  font-size: 13px;
+  color: #999;
+  display: flex;
+
+  span:not(:last-child)::after {
+    content: '·';
+    margin: 0 4px;
+  }
+}

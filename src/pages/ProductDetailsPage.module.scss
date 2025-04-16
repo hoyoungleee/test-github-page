@@ -1,0 +1,253 @@
+
+$max-content-width: 980px;
+$primary-text-color: #212529;
+$secondary-text-color: #868e96;
+$border-color: #e9ecef;
+$price-color: #ff6f0f;
+$content-horizontal-padding: 16px;
+$desktop-breakpoint: 768px;
+$info-column-gap: 50px;
+
+.productDetailsPage {
+  max-width: $max-content-width;
+  margin: 40px auto;
+  padding: 0 $content-horizontal-padding;
+  color: $primary-text-color;
+
+  @media (max-width: ($desktop-breakpoint - 1px)) {
+    margin-top: 0;
+    padding: 20px $content-horizontal-padding;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row; 
+  gap: $info-column-gap;
+
+  @media (max-width: ($desktop-breakpoint - 1px)) {
+    flex-direction: column; 
+    gap: 0;
+  }
+}
+
+.carouselSection {
+  flex: 1 1 58%; 
+  min-width: 0;
+  margin-bottom: 24px; 
+  display: flex;
+  flex-direction: column; 
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+
+.infoSection {
+  flex: 1 1 42%; 
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+  
+  .productTitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 4px 0; 
+    word-break: keep-all; 
+
+    @media (max-width: ($desktop-breakpoint - 1px)) {
+      font-size: 18px;
+    }
+  }
+
+  .metaInfo {
+    font-size: 13px;
+    color: $secondary-text-color;
+    margin-bottom: 16px;
+    span {
+      margin-right: 4px; 
+    }
+  }
+
+  .price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px; 
+  }
+
+  .sellerInfo {
+  
+      margin-bottom: 20px;
+      h2 { font-size: 16px; margin-bottom: 8px; font-weight: normal; color: $secondary-text-color; } // 임시
+      p {}
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7; 
+    margin-bottom: 20px;
+
+    p {
+        margin-bottom: 12px; 
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+  }
+
+  .stats {
+    font-size: 13px;
+    color: $secondary-text-color;
+    margin-bottom: 24px; 
+    span {
+      margin-right: 6px;
+    }
+  }
+
+  .actionButton {
+    width: 100%;
+    background-color: $price-color;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 0; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto; 
+
+    &:hover {
+      opacity: 0.9; 
+    }
+  }
+
+.sellerProductsSection {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sellerProductsList {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  padding-bottom: 15px; 
+}
+
+.productCard {
+  flex: 0 0 auto;
+  width: 150px; 
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.productCard:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* 마우스 호버 시 약간의 그림자를 추가하여 입체감을 줍니다. */
+  transform: translateY(-2px); /* 마우스 호버 시 살짝 위로 움직이는 효과를 줍니다. (선택 사항) */
+}
+
+.productImage {
+  width: 100%;
+  height: 100px; 
+  object-fit: cover;
+}
+
+.productDetails {
+  padding: 10px;
+}
+
+.productTitle {
+  font-size: 21px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.productPrice {
+  font-size: 15px;
+  font-weight: bold;
+  color: $price-color;
+  margin-bottom: 3px;
+}
+
+.productLocation {
+  font-size: 12px;
+  color: $secondary-text-color;
+}
+
+.viewMoreButton {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: $secondary-text-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.popularListingsSection {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.popularListingsList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 10px; 
+}
+
+.breadcrumb {
+  padding: 10px 0;
+  font-size: 0.8em; 
+
+.breadcrumb span {
+  margin-right: 5px; 
+}
+
+.breadcrumb span:last-child {
+  font-weight: bold; 
+  color: #333;
+}
+
+}
+
+.sectionTitleContainer {
+  display: flex; /* flexbox를 사용하여 내부 요소들을 배치 */
+  justify-content: space-between; /* 제목과 버튼을 양쪽 끝으로 보냅니다. */
+  align-items: center; /* 세로 방향으로 가운데 정렬합니다. */
+  margin-bottom: 10px; 
+}
+
+.viewMoreLink {
+  background: none; /* 버튼 배경색 없애기 */
+  border: none; /* 버튼 테두리 없애기 */
+  color: #E84500; /* 글자색을 주황색으로 설정 */
+  font-size: 16px; /* 글자 크기 조절 (원하는 크기로 변경) */
+  cursor: pointer; /* 마우스 커서를 손가락 모양으로 변경 */
+  padding: 0; /* 기본 패딩 없애기 */
+}
+
+.viewMoreLink:hover {
+  text-decoration: underline; /* 마우스 호버 시 밑줄 표시 (선택 사항) */
+}
+
+.viewMoreButton {
+  display: none; /* 기존 버튼 숨김 */
+}

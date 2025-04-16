@@ -1,0 +1,52 @@
+.downloadBanner {
+  background-color: #fff4ee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textSection {
+    flex: 1;
+
+    .highlight {
+      color: #f3561d;
+      font-weight: bold;
+      font-size: 1.7rem;
+      margin: 0;
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #111;
+      margin: 0;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 1rem;
+
+      img {
+        height: 35px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden; /* ✅ 넘치는 부분 잘라냄 */
+    position: relative;
+    img {
+      max-height: 400px;
+    }
+  }
+}

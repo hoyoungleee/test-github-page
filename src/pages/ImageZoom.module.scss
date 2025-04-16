@@ -1,0 +1,16 @@
+
+  
+  .image {
+    transition: transform 0.3s ease-in-out; /* 확대/축소될 때 부드러운 애니메이션 효과를 줍니다. (0.3초 동안) */
+    transform: scale(1); /* 처음 이미지 크기는 1배 */
+  }
+  
+  .image:hover {
+    transform: scale(1.1); /* 마우스 커서를 올리면 이미지를 1.1배로 확대합니다. 이 값으로 확대 정도를 조절할 수 있어요. */
+  }
+  /* ImageZoom.module.scss */
+.imageContainer {
+  display: flex; /* 또는 flex; */
+  overflow: hidden;
+  width: 100%; /* 추가해 보세요 */
+}
