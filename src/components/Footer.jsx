@@ -63,7 +63,7 @@ const Footer = () => {
         <div className={styles.topSection}>
           <div className={styles.logoSection}>
             <img
-              src='/images/logo.png'
+              src={`${import.meta.env.BASE_URL}/images/logo.png`}
               alt='당근마켓 로고'
               className={styles.logo}
             />
